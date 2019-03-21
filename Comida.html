@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster|Oswald" rel="stylesheet">
+
+<style>
+ul {
+  padding: 10px;
+  background: rgba(0,255,0.5);
+  text-align: center;
+    }
+    li {
+      display: inline;
+      padding: 10px 10px 10px 10px;
+      text-align: center;
+    }
+body {
+  font-family: 'Lobster', cursive;
+  margin: 1 auto;
+  max-width: 600px;
+  background: #023655;
+}
+div {
+  height: 250px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  font-size: 75px;
+  color: rgba(197,239,247,1);;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: rgba(197,239,247,1);
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(197,239,247,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(62,43,75,2), rgba(46,2,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 5;
+}
+
+.first{
+  background-image: url("http://4.bp.blogspot.com/-NxuOF97nArE/V-CfuZuEvvI/AAAAAAAAB3c/N2yCzgs1SCEOm16Ph4tAwK3TQIUWxyX2QCK4B/s1600/dominicanfood.jpg");
+ background-size: 100% 100%;
+  height: 260px;
+}
+.second{
+  background-image: url("https://hicartagena.com/wp-content/uploads/2018/03/Bandeja-Paisa.jpg");
+  background-size: 100% 100%;
+  height: 260px;
+}
+.dessert{
+  background-image: url("https://clubsusazon.com/wp-content/uploads/sites/2/2017/08/shutterstock_629128961.jpg");
+  background-size: 100% 100%;
+  height: 260px;
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 50px;
+  }
+  h2 {
+    font-size: 30px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 15px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+    <ul>
+      <li><button onclick=DominicanEntrees()>Dominicano</button></li>
+      <li><button onclick=ColombianEntrees()>Colombiano</button></li>
+      <li><button onclick=Postres()>Postres</button></li>
+    </ul>
+
+<h1>Kiara's Restaurant</h1>
+<h2>Colombian & Dominican delish</h2>
+
+<div id="Aquiles"> </div>
+
+
+<script>
+  function DominicanEntrees() {
+    Aquiles = document.getElementById("Aquiles")
+    Aquiles.innerHTML =''
+	  Aquiles.innerHTML += DominicanDivs[0]
+    Aquiles.innerHTML += DominicanDivs[1]
+    Aquiles.innerHTML += DominicanDivs[2]
+    //alert("¿klok?")
+    items = document.getElementsByClassName("item")
+    items[0].style.background = DominicanImages[0]
+    items[0].style.backgroundSize = '100% 100%'
+    items[1].style.background = DominicanImages[1]
+    items[1].style.backgroundSize = '100% 100%'
+    items[2].style.background = DominicanImages[2]
+    items[2].style.backgroundSize = '100% 100%'
+  }
+  
+  function ColombianEntrees() {
+    Aquiles = document.getElementById("Aquiles")
+    Aquiles.innerHTML =''
+	  Aquiles.innerHTML += ColombianoDivs[0]
+    Aquiles.innerHTML += ColombianoDivs[1]
+    Aquiles.innerHTML += ColombianoDivs[2]
+    //alert("¿qué hubo pues?")
+    items = document.getElementsByClassName("item")
+    items[0].style.background = ColombianoImages[0]
+    items[0].style.backgroundSize = '100% 100%'
+    items[1].style.background = ColombianoImages[1]
+    items[1].style.backgroundSize = '100% 100%'
+    items[2].style.background = ColombianoImages[2]
+    items[2].style.backgroundSize = '100% 100%'
+  }
+  
+  function Postres() {
+    Aquiles = document.getElementById("Aquiles")
+    Aquiles.innerHTML =''
+	  Aquiles.innerHTML += PostresDivs[0]
+    Aquiles.innerHTML += PostresDivs[1]
+    Aquiles.innerHTML += PostresDivs[2]
+    //alert("Que ricooo")
+    items = document.getElementsByClassName("item")
+    items[0].style.background = PostresImages[0]
+    items[0].style.backgroundSize = '100% 140%'
+    items[1].style.background = PostresImages[1]
+    items[1].style.backgroundSize = '100% 100%'
+    items[2].style.background = PostresImages[2]
+    items[2].style.backgroundSize = '100% 100%'
+  }
+  
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+  
+  DominicanImages = [
+      'url("http://www.mimannarestaurant.com/wp-content/uploads/sites/57/2017/10/Mangu-Dominican-Republic.jpg")',
+      'url("https://www.chefzeecooks.com/wp-content/uploads/2018/09/Longaniza_web.jpg")',
+      'url("https://images-gmi-pmc.edge-generalmills.com/793ceaa8-033e-4bed-a73c-967cf74d0c3b.jpg")',
+      
+  ]
+  ColombianoImages = [
+    'url("https://www.absolutviajes.com/wp-content/uploads/2008/10/bandeja-paisa-png.png")',
+    'url("https://previews.123rf.com/images/anamejia18/anamejia181707/anamejia18170700078/82228737-tradicional-colombiana-arepa-de-choclo-preparaci%C3%B3n-asar-el-pan-de-ma%C3%ADz-relleno.jpg")',
+    'url("https://lh6.ggpht.com/_BizpeaUzxq8/SSbC79_UAVI/AAAAAAAAAjY/L0_Iuimfegk/s800/sancocho.jpg")',
+    
+  ]
+  PostresImages = [
+    'url("https://thumbs.dreamstime.com/z/tres-leches-cake-25297363.jpg")',
+    'url("http://montsia.es/wp-content/uploads/2018/04/arroz-con-leche-montsia.jpg")',
+    'url("http://4.bp.blogspot.com/-E4tSyoYrxDs/URPdq-371MI/AAAAAAAAMrw/wDImIlOSvr4/s1600/receta-tembleque-de-coco.jpg")',
+    
+  ]
+
+DominicanDivs = [
+  '<div class="item"><p> Plato de Mangu <span class="price">$7</span><br /><small>large red onion, cut in half, thinly sliced. Unripe plantains, peeled,softened. Fried eggs,fried cheese and fried salami.</small></p></div>',
+  '<div class="item"><p> Longganisa<span class="price">$15</span><br /><small>Ground meat, often pork, beef, or veal, along with salt, spices and other flavourings,and breadcrumbs, encased by a skin..</small></p></div>',
+  '<div class="item"><p> Empanadas <span class="price">$5</span><br /><small>Empanadas de queso or pollo or con carne. Empanada dough,empanada filling. Aioli Dip: 1 cup real mayonnaise, such as Kraft. tablespoon adobo sauce.</small></p></div>',
+
+  ]
+ColombianoDivs = [
+  '<div class="item"><p> La Bandeja Paisa <span class="price">$22</span><br /><small>La base: Frijoles cargamanto. Arroz blanco y Chicharrón. Carne molida o en polvo. Huevo frito. Lo dulce: Tajada de maduro. Chorizo y morcilla.</small></p></div>',
+  '<div class="item"><p> Arepa de Choclo <span class="price">$7</span><br /><small> 5 tazas de granos de maíz dulce. 1/2 cucharadita de azúcar. Sal al gusto. 3 cucharadas de mantequilla sin sal, o más según sea necesario. Queso fresco o queso blanco para servir.</small></p></div>',
+  '<div class="item"><p> Sancocho de Pollo <span class="price">$14</span><br /><small> Pollo o gallina entera. Papas peladas y picadas en tamaño grande. Platanos verdes picados a mano no muy pequeños. Yuca cortada y pelada. Cebolla picada finamente con tomate. Cubito de caldo de gallina..</small></p></div>',
+
+  ]
+  PostresDivs = [
+  '<div class="item"><p> Tres Leches <span class="price">$4</span><br /><small>La base: Para el biscocho huevos, azucar, extracto de vanilla, harina, leche evaporada, leche, leche condensada: La Lechera. Para la cobertura claros de huevo.</small></p></div>',
+  '<div class="item"><p> Arroz de Leche <span class="price">$8</span><br /><small> Arroz lavada, agua, leche de vaca, leche evaporada, azucar, raja de canela. Canela en polovo o queso blanco(opcional).</small></p></div>',
+  '<div class="item"><p> Tembleque de Coco <span class="price">$14</span><br /><small> 4 cups coconut milk. 1/2 cup of cornstarch. 2/3 cup of sugar. 1/2 teaspoon salt. 1 tablespoon grand marnier. Ground cinnamon.</small></p></div>',
+
+  ]
+</script>
+
+</body>
